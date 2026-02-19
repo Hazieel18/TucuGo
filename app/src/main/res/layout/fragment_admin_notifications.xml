@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar Notificación Global"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título del mensaje">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNotificationTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Mensaje (Cuerpo)">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNotificationBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:lines="4" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destinatarios"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/rbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Todos los usuarios"
+            android:checked="true" />
+        <RadioButton
+            android:id="@+id/rbDrivers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solo Conductores" />
+        <RadioButton
+            android:id="@+id/rbBusinesses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solo Comercios" />
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSendNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="12dp"
+        android:text="Enviar Ahora" />
+
+</LinearLayout>

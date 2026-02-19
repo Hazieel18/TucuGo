@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivParticipantImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvParticipantName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvLastMessageTime"
+        app:layout_constraintStart_toEndOf="@+id/ivParticipantImage"
+        app:layout_constraintTop_toTopOf="@+id/ivParticipantImage"
+        tools:text="Nombre del Participante" />
+
+    <TextView
+        android:id="@+id/tvLastMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@id/tvParticipantName"
+        app:layout_constraintStart_toStartOf="@id/tvParticipantName"
+        app:layout_constraintTop_toBottomOf="@+id/tvParticipantName"
+        tools:text="Este es el último mensaje de la convers..." />
+
+    <TextView
+        android:id="@+id/tvLastMessageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvParticipantName"
+        tools:text="10:30 AM" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

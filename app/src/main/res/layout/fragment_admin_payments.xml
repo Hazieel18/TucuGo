@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configuración del Sistema (Admin)"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tasa BCV -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tasa de Cambio BCV"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tasa actual (Bs/$)"
+                    app:prefixText="Bs. ">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_bcv_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fetch_external_rate"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sugerir Tasa desde Internet"
+                    app:icon="@android:drawable/ic_menu_rotate" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Datos de Recepción -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos de Recepción de Pagos"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_pago_movil_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono Pago Móvil"
+            android:inputType="phone" />
+        <EditText
+            android:id="@+id/et_pago_movil_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cédula/RIF Pago Móvil" />
+
+        <EditText
+            android:id="@+id/et_bank_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del Banco"
+            android:layout_marginTop="8dp" />
+        <EditText
+            android:id="@+id/et_account_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de Cuenta"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/et_account_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titular de la Cuenta" />
+
+        <EditText
+            android:id="@+id/et_binance_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Binance ID / Email"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/et_zinli_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Zinli"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_save_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Todo"
+            android:layout_marginTop="24dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Herramientas de Desarrollo"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_seed_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Poblar Base de Datos (Seeder)"
+            android:backgroundTint="#FF9800" />
+
+    </LinearLayout>
+</ScrollView>

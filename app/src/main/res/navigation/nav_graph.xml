@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.tucugo.app.ui.fragments.WelcomeFragment"
+        android:label="Bienvenido"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tucugo.app.ui.fragments.LoginFragment"
+        android:label="Iniciar Sesión"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.tucugo.app.ui.fragments.RegisterFragment"
+        android:label="Registro"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.tucugo.app.ui.fragments.DashboardFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_nav_home_to_businessDetailFragment"
+            app:destination="@id/businessDetailFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_rideRequestFragment"
+            app:destination="@id/rideRequestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="com.tucugo.app.ui.fragments.OrdersFragment"
+        android:label="Pedidos"
+        tools:layout="@layout/fragment_orders">
+        <action
+            android:id="@+id/action_nav_orders_to_orderTrackingFragment"
+            app:destination="@id/orderTrackingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_trips"
+        android:name="com.tucugo.app.ui.fragments.TripsFragment"
+        android:label="Viajes"
+        tools:layout="@layout/fragment_trips" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.tucugo.app.ui.fragments.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_nav_profile_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+        <action
+            android:id="@+id/action_nav_profile_to_driverDashboardFragment"
+            app:destination="@id/driverDashboardFragment" />
+        <action
+            android:id="@+id/action_nav_profile_to_businessDashboardFragment"
+            app:destination="@id/businessDashboardFragment" />
+        <action
+            android:id="@+id/action_nav_profile_to_chatsListFragment"
+            app:destination="@id/chatsListFragment" />
+        <action
+            android:id="@+id/action_nav_profile_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.tucugo.app.ui.fragments.VerificationFragment"
+        android:label="Verificación"
+        tools:layout="@layout/fragment_verification">
+        <argument
+            android:name="requestRole"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/businessDetailFragment"
+        android:name="com.tucugo.app.ui.fragments.BusinessDetailFragment"
+        android:label="Detalle de Negocio"
+        tools:layout="@layout/fragment_business_detail">
+        <argument
+            android:name="businessId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_businessDetailFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rideRequestFragment"
+        android:name="com.tucugo.app.ui.fragments.RideRequestFragment"
+        android:label="Solicitar Viaje"
+        tools:layout="@layout/fragment_ride_request">
+        <action
+            android:id="@+id/action_rideRequestFragment_to_paymentUploadFragment"
+            app:destination="@id/paymentUploadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.tucugo.app.ui.fragments.CartFragment"
+        android:label="Mi Carrito"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartFragment_to_paymentUploadFragment"
+            app:destination="@id/paymentUploadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentUploadFragment"
+        android:name="com.tucugo.app.ui.fragments.PaymentUploadFragment"
+        android:label="Reportar Pago"
+        tools:layout="@layout/fragment_payment_upload" />
+
+    <fragment
+        android:id="@+id/driverDashboardFragment"
+        android:name="com.tucugo.app.ui.fragments.DriverDashboardFragment"
+        android:label="Panel Conductor"
+        tools:layout="@layout/fragment_driver_dashboard">
+        <action
+            android:id="@+id/action_driverDashboardFragment_to_activeTripFragment"
+            app:destination="@id/activeTripFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/businessDashboardFragment"
+        android:name="com.tucugo.app.ui.fragments.BusinessDashboardFragment"
+        android:label="Panel Comercio"
+        tools:layout="@layout/fragment_business_dashboard" />
+
+    <fragment
+        android:id="@+id/activeTripFragment"
+        android:name="com.tucugo.app.ui.fragments.ActiveTripFragment"
+        android:label="Viaje en Curso"
+        tools:layout="@layout/fragment_active_trip" />
+
+    <fragment
+        android:id="@+id/orderTrackingFragment"
+        android:name="com.tucugo.app.ui.fragments.OrderTrackingFragment"
+        android:label="Seguimiento de Pedido"
+        tools:layout="@layout/fragment_order_tracking">
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatsListFragment"
+        android:name="com.tucugo.app.ui.fragments.ChatsListFragment"
+        android:label="Chats"
+        tools:layout="@layout/fragment_chats_list">
+        <action
+            android:id="@+id/action_chatsListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.tucugo.app.ui.fragments.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="relatedId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reportar Pago"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tv_payment_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Por favor, realiza el pago a los datos indicados y adjunta el comprobante."
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tv_admin_payment_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F0F0F0"
+            android:padding="8dp"
+            android:text="Cargando datos bancarios..."
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Método de Pago"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spinner_payment_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/payment_methods"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de Referencia"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/et_reference_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: 12345678"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monto Pagado ($)"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+        <EditText
+            android:id="@+id/et_payment_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: 10.50"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/btn_select_proof_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adjuntar Foto del Comprobante"
+            android:layout_marginTop="16dp" />
+
+        <ImageView
+            android:id="@+id/iv_payment_proof_preview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btn_submit_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar Reporte de Pago"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+</ScrollView>

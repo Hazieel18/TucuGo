@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solicitar un Viaje"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <EditText
+        android:id="@+id/et_pickup_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="¿Dónde te buscamos?" />
+
+    <EditText
+        android:id="@+id/et_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="¿A dónde vas?"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número de pasajeros"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinner_passengers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/passenger_counts" />
+
+    <Button
+        android:id="@+id/btn_request_ride"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Pedido"
+        android:layout_marginTop="32dp" />
+
+</LinearLayout>

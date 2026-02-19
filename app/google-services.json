@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "845437999921",
+    "firebase_url": "https://studio-7768146607-e57de.firebaseio.com",
+    "project_id": "studio-7768146607-e57de",
+    "storage_bucket": "studio-7768146607-e57de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845437999921:android:6dc8bee24c1c76a5d72e10",
+        "android_client_info": {
+          "package_name": "com.tucugo.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtk8h9b_cOfVdKbcOdCJAJTZep87wofx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="payment_methods">
+        <item>Efectivo</item>
+        <item>Transferencia</item>
+        <item>Tarjeta de Crédito/Débito</item>
+    </string-array>
+
+    <string-array name="passenger_counts">
+        <item>1 pasajero</item>
+        <item>2 pasajeros</item>
+        <item>3 pasajeros</item>
+        <item>4 pasajeros</item>
+    </string-array>
+</resources>

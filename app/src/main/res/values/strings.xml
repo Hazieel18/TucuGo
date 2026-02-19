@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">TucuGo</string>
+    <string name="desc_business_header">Imagen de encabezado del negocio</string>
+
+    <!-- Navegación -->
+    <string name="title_home">Inicio</string>
+    <string name="title_orders">Mis Pedidos</string>
+    <string name="title_trips">Mis Viajes</string>
+    <string name="title_profile">Perfil</string>
+    <string name="title_search">Búsqueda</string>
+    <string name="title_chat">Chat</string>
+
+    <!-- Dashboard y Comercio -->
+    <string name="welcome_greeting">Hola, ¿qué necesitas hoy?</string>
+    <string name="label_business_panel_title">Panel de Control - Comercio</string>
+    <string name="label_pending_orders">Pedidos Pendientes</string>
+    <string name="hint_search_stores">Buscar tiendas o productos</string>
+    <string name="label_request_ride">Pedir Viaje</string>
+    <string name="label_long_trip">Viaje Largo</string>
+    <string name="label_categories">Categorías</string>
+    <string name="label_featured_businesses">Negocios Destacados</string>
+
+    <!-- Chat y Audio -->
+    <string name="label_recording">Grabando...</string>
+    <string name="label_recording_cancelled">Grabación cancelada</string>
+    <string name="label_slide_to_cancel">Desliza para cancelar</string>
+    <string name="hint_type_message">Escribe un mensaje...</string>
+    <string name="desc_record_audio">Grabar nota de voz</string>
+    <string name="desc_send_message">Enviar mensaje</string>
+    <string name="msg_error_capture_audio">Error al capturar audio</string>
+    <string name="msg_permission_denied">Permiso de audio denegado</string>
+    <string name="msg_error_session">Sesión no iniciada</string>
+    <string name="msg_error_generic">Ocurrió un error inesperado</string>
+    <string name="msg_error_chat_id">Error: Chat ID no encontrado</string>
+
+    <!-- Otros -->
+    <string name="price_format">$%1$.2f</string>
+    <string name="btn_view_cart">Ver Carrito (%1$d)</string>
+    <string name="label_menu_products">Menú / Productos</string>
+    <string name="label_business_info">Información del negocio y horarios.</string>
+</resources>
